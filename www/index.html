@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Tone Analyser App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/0bfdbb1f27.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/myappangular.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body font-family=calibri>
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <div class="row">
+            <div class="col-sm-3"><img class="newappIcon" src="img/personality1.jpg"></div>
+            <div class="col-sm-3">
+                <h1>Welcome to the Tone Analyser App</h1>
+            </div>
+            <div class="col-sm-6">
+                <br><small>Enter Text (min 100 words) or </small><button class="btn btn-info" ng-click="text=sampleText">Paste Sample Text</button>
+                <textarea class="form-control" font-family=calibri rows="5" ng-model="text"></textarea>
+                <br>
+                <div class="container">
+                    <button type="button" class="btn btn-info" ng-click="AnalyseTone(text);tone=true;chattone=false;">Analyze Text</button>
+                    <button type="button" class="btn btn-info" ng-click="AnalyseChatTone(text);tone=false;chattone=true;">Analyze Chat</button>
+                    <button type=" button " class="btn btn-info " ng-click="text='' ;resultsReady=false; ">Clear</button>
+                </div>
+            </div>
+        </div>
+        <div align=center ng-show="loading ">
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw "></i>
+            <span class="sr-only ">Loading...</span>
+        </div>
+        <div>
+            <table class="table-sm table-hover" ng-show="showResult">
+                <tbody ng-repeat="resp in response.tone_categories ">
+                    <tr ng-repeat="tone in resp.tones ">
+                        <td width="25%">{{tone.tone_name}}</td>
+                        <td>
+                            <div ng-init="percent=tone.score*100 " class="outer">
+                                <p>
+                                    <div class="inner" ng-style="{ width: percent + '%' } ">{{tone.score | number:4}}</div>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+</body>
+
+</html>
