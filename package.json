@@ -6,8 +6,8 @@
         "start": "node toneweb.js"
     },
     "dependencies": {
-        "express": "4.13.x",
-        "cfenv": "1.0.x",
-        "helmet": "3.9.0"
+        "cfenv": "^1.2.2",
+        "express": "^4.17.1",
+        "helmet": "^3.22.0"
     }
 }
