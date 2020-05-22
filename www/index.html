@@ -46,8 +46,7 @@
                         <td>
                             <div ng-init="percent=tone.score*100 " class="outer">
                                 <p>
-                                    {{tone.score | number:4}}
-                                    <div class="inner" ng-style="{ width: percent + '%' } "></div>
+                                    <div class="inner" ng-style="{ width: percent + '%' } "></div>{{tone.score | number:4}}
                                 </p>
                             </div>
                         </td>
