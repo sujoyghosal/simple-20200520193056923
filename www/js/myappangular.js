@@ -18,7 +18,7 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.loading = true;
         $scope.errorMsg = '';
         $scope.res = '';
-        var url = "https://sujoy.cfapps.io/toneapi/tone?text=" + content;
+        var url = "https://sujoy-watson-ai-app-neurogliac-underminer.cfapps.io/tone?text=" + content;
         //var url = "http://localhost:3000/tone?text=" + content;
         $http({
             method: "GET",
