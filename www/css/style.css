@@ -34,13 +34,6 @@ h1 {
     font-size: 2em;
 }
 
-p {
-    font-weight: bold;
-    font-size: 22px;
-    font-family: calibri;
-    color: grey;
-}
-
 .leftHalf {
     float: left;
     background-color: #26343f;
@@ -174,4 +167,11 @@ input[type=text] {
 pre {
     padding: 0;
     margin: 0;
+}
+
+p {
+    font-weight: bold;
+    font-size: 22px;
+    font-family: calibri;
+    color: grey;
 }
