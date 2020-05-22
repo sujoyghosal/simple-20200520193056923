@@ -118,8 +118,9 @@ td {
 }
 
 .inner {
-    height: 25px;
-    background-color: rgb(189, 14, 14);
+    height: 20px;
+    background-color: yellow;
+    border: #BA55D3;
 }
 
 .outer {
