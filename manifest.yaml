@@ -1,4 +1,4 @@
 applications:
  - name: ToneAnalyserSujoyWeb
    random-route: false
-   memory: 256M
+   memory: 128M
