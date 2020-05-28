@@ -9,7 +9,7 @@ app.controller('myCtrl', function($scope, $http) {
     $scope.tone = false;
     $scope.chattone = false;
     $scope.AnalyseTone = function(content) {
-        //  alert($scope.address);
+
         if (!content || content.length < 4) {
             alert("Not Enough Words!")
             return;
