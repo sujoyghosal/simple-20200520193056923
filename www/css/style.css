@@ -120,7 +120,7 @@ td {
 .inner {
     height: 20px;
     background-color: rgb(9, 29, 214);
-    border: 2px solid yellow;
+    border: 2px solid red;
 }
 
 .outer {
